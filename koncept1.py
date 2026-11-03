@@ -5,16 +5,16 @@ import schedule
 import random
 import os
 from dotenv import load_dotenv
+load_dotenv()
 
-# --- NOTION NASTAVENIA ---
-NOTION_TOKEN = os.getenv()
-DATABASE_ID = "3fa1d245a0c48094a25ff2feba2b5e79"
+NOTION_TOKEN = os.getenv("NOTION_TOKEN")
+DATABASE_ID = os.getenv("DATABASE_ID")
 NOTION_VERSION = "2022-06-28"
 
-# --- BAZOŠ NASTAVENIA ---
+
 INTERVAL_MINUTY = 5  
 URL_BAZOS = "https://auto.bazos.sk/?hledat=&rubriky=auto&hlokalita=91101&humkreis=75&cenaod=15000&cenado=&order=4&crp=&kitx=ano"
-# ------------------
+
 
 USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
